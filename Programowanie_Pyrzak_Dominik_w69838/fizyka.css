@@ -1,0 +1,68 @@
+/* Styl dla pojedynczego kafelka */
+.fact {
+    background-color: #00008B; /* Ciemnoniebieskie tło */
+    color: white; /* Biały kolor tekstu */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    position: relative;
+    text-align: center; /* Centrowanie tekstu */
+    width: calc(25% - 40px); /* Szerokość kafelka na 25% szerokości kontenera z uwzględnieniem marginesów */
+    margin: 10px; /* Marginesy */
+    display: inline-block; /* Kafelki obok siebie */
+}
+/* Styl dla tytułu kafelka */
+.fact h2 {
+    margin-top: 0;
+    font-size: 24px;
+}
+
+/* Styl dla dymku */
+.tooltip {
+    position: absolute;
+    top: 0;
+    left: 100%; /* Dymek na prawo od kafelka */
+    visibility: hidden;
+    opacity: 0;
+    background-color: #67c7ec; /* Jasnoniebieski kolor tła */
+    color: #000;
+    border: 1px solid #000;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 999; /* Wyżej niż inne elementy */
+}
+
+
+/* Styl dymku po najechaniu kursorem */
+.fact:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Styl dla kontenera kafelków */
+#facts-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Rozłożenie równomiernie na szerokość kontenera */
+    padding: 0 20px; /* Dodany padding */
+    max-width: 1200px; /* Maksymalna szerokość kontenera */
+    margin: 0 auto; /* Wyśrodkowanie */
+    box-sizing: border-box; /* Uwzględnienie paddingu w szerokości kontenera */
+}
+/* Styl dla nagłówka */
+.header {
+    background-color: #000; /* Czarne tło */
+    color: #fff; /* Biały kolor tekstu */
+    padding: 20px; /* Wewnętrzne marginesy */
+    text-align: center; /* Centrowanie tekstu */
+    font-size: 36px; /* Powiększenie czcionki */
+}
+/* Styl dla całego tła strony */
+body {
+    background-color: #06023d; /* Ciemnofioletowy kolor tła */
+    margin: 0; /* Usunięcie domyślnego marginesu */
+    padding: 0; /* Usunięcie domyślnych wewnętrznych marginesów */
+}
+

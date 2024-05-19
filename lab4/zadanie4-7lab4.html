@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Przyciski z kolorem tła i widocznością elementu</title>
+  <style>
+    button {
+      padding: 10px 20px;
+      margin: 5px;
+      border: none;
+      cursor: pointer;
+    }
+    #myElement {
+      margin: 20px 0;
+    }
+  </style>
+</head>
+<body>
+  <button id="button1" onclick="changeColor(1)" style="background-color: white;">Przycisk 1</button>
+  <button id="button2" onclick="changeColor(2)" style="background-color: white;">Przycisk 2</button>
+  <button id="button3" onclick="changeColor(3)" style="background-color: white;">Przycisk 3</button>
+  <button id="toggleVisibilityButton" onclick="toggleVisibility()">Pokaż/Ukryj Paragraf</button>
+
+  <p id="myElement">Nie naciskaj nic, bo zniknę</p>
+
+  <input type="text" id="textInput" placeholder="Wpisz coś" onkeypress="handleKeyPress(event, addToList)">
+  <button id="addToListButton" onclick="addToList()">Dodaj do listy</button>
+  <button id="clearListButton" onclick="clearList()">Wyczyść listę</button>
+  
+  <ul id="itemList"></ul>
+  
+  <input type="text" id="firstName" placeholder="Imię" onkeypress="handleKeyPress(event, addToTable)">
+  <input type="text" id="lastName" placeholder="Nazwisko" onkeypress="handleKeyPress(event, addToTable)">
+  <button id="addToTableButton" onclick="addToTable()">Dodaj do tabeli</button>
+  <button id="clearTableButton" onclick="clearTable()">Wyczyść tabelę</button>
+
+  <table border="1" id="nameTable">
+    <thead>
+      <tr>
+        <th>Imię</th>
+        <th>Nazwisko</th>
+        <th>Akcje</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Wiersze będą dodawane tutaj -->
+    </tbody>
+  </table>
+
+  <script>
+    function changeColor(buttonNumber) {
+      // Reset all buttons to white
+      document.getElementById('button1').style.backgroundColor = 'white';
+      document.getElementById('button2').style.backgroundColor = 'white';
+      document.getElementById('button3').style.backgroundColor = 'white';
+
+      // Change the background color of the clicked button
+      if (buttonNumber === 1) {
+        document.getElementById('button1').style.backgroundColor = 'red';
+      } else if (buttonNumber === 2) {
+        document.getElementById('button2').style.backgroundColor = 'green';
+      } else if (buttonNumber === 3) {
+        document.getElementById('button3').style.backgroundColor = 'blue';
+      }
+    }
+
+    function toggleVisibility() {
+      const element = document.getElementById('myElement');
+      if (element.style.display === 'none') {
+        element.style.display = 'block';
+      } else {
+        element.style.display = 'none';
+      }
+    }
+
+    function addToList() {
+      const textInput = document.getElementById('textInput').value;
+      if (textInput.trim() !== "") {
+        const li = document.createElement('li');
+        li.textContent = textInput;
+        const deleteButton = document.createElement('button');
+        deleteButton.textContent = 'Usuń';
+        deleteButton.onclick = function() {
+          li.remove();
+        };
+        li.appendChild(deleteButton);
+        document.getElementById('itemList').appendChild(li);
+        document.getElementById('textInput').value = "";
+      }
+    }
+
+    function clearList() {
+      document.getElementById('itemList').innerHTML = "";
+    }
+
+    function addToTable() {
+      const firstName = document.getElementById('firstName').value;
+      const lastName = document.getElementById('lastName').value;
+      if (firstName.trim() !== "" && lastName.trim() !== "") {
+        const table = document.getElementById('nameTable').getElementsByTagName('tbody')[0];
+        const newRow = table.insertRow();
+
+        const firstNameCell = newRow.insertCell(0);
+        const lastNameCell = newRow.insertCell(1);
+        const actionCell = newRow.insertCell(2);
+        
+        firstNameCell.textContent = firstName;
+        lastNameCell.textContent = lastName;
+        
+        const deleteButton = document.createElement('button');
+        deleteButton.textContent = 'Usuń';
+        deleteButton.onclick = function() {
+          newRow.remove();
+        };
+        actionCell.appendChild(deleteButton);
+
+        document.getElementById('firstName').value = "";
+        document.getElementById('lastName').value = "";
+      }
+    }
+
+    function clearTable() {
+      const tableBody = document.getElementById('nameTable').getElementsByTagName('tbody')[0];
+      tableBody.innerHTML = "";
+    }
+
+    function handleKeyPress(event, action) {
+      if (event.key === 'Enter') {
+        event.preventDefault();
+        action();
+      }
+    }
+  </script>
+</body>
+</html>

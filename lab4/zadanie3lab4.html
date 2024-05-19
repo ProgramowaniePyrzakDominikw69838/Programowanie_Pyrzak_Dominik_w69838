@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Verify Age</title>
+  <script>
+    function checkAge() {
+      const age = prompt("Podaj swój wiek:");
+      if (age < 18) {
+        window.location.href = "https://www.w3schools.com/jsref/met_win_open.asp";
+      }
+    }
+
+    window.onload = checkAge;
+  </script>
+</head>
+<body>
+  <h1>Witamy na naszej stronie!</h1>
+  <p>Ta strona jest przeznaczona dla osób pełnoletnich.</p>
+</body>
+</html>

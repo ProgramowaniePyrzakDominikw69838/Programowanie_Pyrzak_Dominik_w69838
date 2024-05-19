@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To moje miejsce spokoju</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: "inter", sans-serif;
+            box-sizing: border-box;
+            z-index: -1;
+        }
+
+        h1 {
+            font-size: 50px;
+        }
+
+        h2 {
+            font-size: 30px;
+        }
+
+        header {
+            position: static;
+            width: 100%;
+            background-color: black;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            box-shadow: 0 0 10px 2px #aaa;
+            z-index: 1;
+        }
+
+        .menu {
+            margin-top: 10px;
+            display: flex;
+            flex-direction: row;
+            align-items: flex-end;
+            justify-content: flex-end; /* Dodane */
+        }
+
+        .menu-button {
+            background-color: navy;
+            border: none;
+            color: white;
+            padding: 15px 30px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 24px;
+            margin: 10px;
+            cursor: pointer;
+            border-radius: 10px;
+            box-shadow: 0 0 10px 2px #555;
+        }
+        .countdown {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 72px;
+            color: black;
+            font-weight: bold;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <a href="inner.html" class="menu-button">Dominik Pyrzak</a>
+        <nav class="menu">
+            <a href="fizyka.html" class="menu-button">Fizyka</a>
+            <a href="wejscie2.html" class="menu-button">Astronomia</a>
+            <a href="wejscie3.html" class="menu-button">Informatyka</a>
+        </nav>
+    </header>
+
+    <a href="https://pl.freepik.com/darmowe-zdjecie-wektory/kotki">
+        <b>Koteczki</b>
+    </a>
+    <table border="2px" solid black>
+        <tr>
+            <td>Okres</td>
+            <td>miejsce</td>
+        </tr>
+        <tr>
+            <td>2021-2023</td>
+            <td>Wsiz w Rzeszowie</td>
+        </tr>
+        <tr>
+            <td>2018-2021</td>
+            <td>Wsiz w Rzeszowie</td>
+        </tr>
+    </table>
+    <table border="2px" style="width: 50%; height: 300px;">
+
+        <tr>
+            <td>STATYSTYKI WĘDEK I ICH UMIEJETNOSCI</td>
+
+        </tr>
+
+        <tr>
+            <td>Długość wędki</td>
+            <td>Rodzaj wędki</td>
+            <td>Wielkość haczyka</td>
+            <td>Obrażenia</td>
+        </tr>
+        <tr>
+            <td>5m</td>
+            <td>drewniana</td>
+            <td>17mm</td>
+            <td>50-72 dmg</td>
+        </tr>
+        <tr>
+            <td>6m</td>
+            <td>metalowa</td>
+            <td>22mm</td>
+            <td>38-52 dmg</td>
+        </tr>
+    </table>
+    <div id="countdown"></div>
+    <script src="lab4.js"></script>
+</body>
+
+</html>

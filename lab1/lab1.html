@@ -5,6 +5,16 @@
     <title>O mnie</title>
 </head>
 <body>
+    <button onclick="location.href='ulubione_seriale.html'">Ulubione seriale</button>
+    <button onclick="location.href='ulubione_ksiazki.html'">Ulubione książki</button>
+    <form>
+        <label for="imie">Imię:</label><br>
+        <input type="text" id="imie" name="imie"><br>
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email"><br>
+        <input type="submit" value="Wyślij">
+    </form>
+
     <h1>O mnie</h1>
     
     <h2>Wykształcenie</h2>
@@ -14,7 +24,7 @@
     <p>Moje zainteresowania obejmują sport, czytanie książek oraz oglądanie seriali.</p>
     
     <h2>Ulubione książki</h2>
-    <p>Moją ulubioną książką jest <b>"Mały książe"</b> autorstwa Antoine de Saint-Exupéry <i>Nowela</i>.</p>
+    <p>Moją ulubioną książką jest <b>"Mały książe"</b> autorstwa Antoine de Saint-Exupéry jest to <i>Nowela</i>.</p>
     
     <h2>Ulubione seriale</h2>
     <p>Moje ulubione seriale to <b>"Gra o tron"</b> oraz <i>"Stranger Things"</i>.</p>
@@ -58,5 +68,30 @@
             <td>Gimnazjum nr 2 w Kolbuszowej</td>
         </tr>
     </table>
+    
+    <h2>Nowa tabela</h2>
+    <table border="1" style="width: 200px; height: 200px;">
+        <tr>
+            <td rowspan="2" colspan="2" style="width: 100px; height: 100px;"></td>
+            <td colspan="2" style="width: 100px; height: 50px;"></td>
+        </tr>
+        <tr>
+            <td style="width: 50px; height: 50px;"></td>
+            <td style="width: 50px; height: 50px;"></td>
+        </tr>
+        <tr>
+            <td style="width: 50px; height: 50px;"></td>
+            <td colspan="2" rowspan="2" style="width: 100px; height: 100px;"></td>
+            <td style="width: 100px; height: 50px;"></td>
+        </tr>
+        <tr>
+            <td colspan="2" style="width: 100px; height: 50px;"></td>
+        </tr>
+    </table>
+    
+    <img src="https://www.mozaweb.com/pl/mozaik3D/FOL/altalanos/jupiter/960.jpg" />
+
+
+
 </body>
 </html>

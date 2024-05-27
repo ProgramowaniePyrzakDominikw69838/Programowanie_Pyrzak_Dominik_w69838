@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>O mnie</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: "Inter", sans-serif;
+            box-sizing: border-box;
+        }
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: calc(100% - 240px); /* zmieniono szerokość na 100% minus szerokość przycisków */
+            background-color: #f0f0f0;
+            padding: 20px 120px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0 0 10px 2px #aaa;
+            z-index: 100;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+        }
+        nav ul li a.home {
+            color: #ff0000; /* Kolor wyróżniający dla "Strona główna" */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Dominik Pyrzak</h1>
+        <nav>
+            <ul>
+                <li><a href="#" class="home">Strona główna</a></li>
+                <li><a href="#">Astronomia</a></li>
+                <li><a href="#">Fizyka</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div style="margin-top: 80px;"> <!-- dodane w celu uniknięcia zasłaniania treści przez nagłówek -->
+        <button onclick="location.href='ulubione_seriale.html'">Ulubione seriale</button>
+        <button onclick="location.href='ulubione_ksiazki.html'">Ulubione książki</button>
+        <form>
+            <label for="imie">Imię:</label><br>
+            <input type="text" id="imie" name="imie"><br>
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email"><br>
+            <input type="submit" value="Wyślij">
+        </form>
+
+        <h1>O mnie</h1>
+        
+        <h4>Wykształcenie</h4>
+        <p>Aktualnie studiuję na WSIZ. Wcześniej skończyłem technikum nr 2 w Rzeszowie</p>
+        
+        <h4>Zainteresowania</h4>
+        <p>Moje zainteresowania obejmują sport, czytanie książek oraz oglądanie seriali.</p>
+        
+        <h4>Ulubione książki</h4>
+        <p>Moją ulubioną książką jest <b>"Mały książe"</b> autorstwa Antoine de Saint-Exupéry jest to <i>Nowela</i>.</p>
+        
+        <h2>Ulubione seriale</h2>
+        <p>Moje ulubione seriale to <b>"Gra o tron"</b> oraz <i>"Stranger Things"</i>.</p>
+        
+        <h2>Lista nieposortowana</h2>
+        <ul>
+            <li>Sport</li>
+            <li>Czytanie książek</li>
+            <li>Oglądanie seriali</li>
+        </ul>
+        
+        <h2>Lista posortowana</h2>
+        <ol>
+            <li>Sport</li>
+            <li>Czytanie książek</li>
+            <li>Oglądanie seriali</li>
+        </ol>
+        
+        <h2>Ulubione seriale z odnośnikami</h2>
+        <ul>
+            <li><a href="https://www.hbo.com/game-of-thrones" target="_blank">Gra o tron</a></li>
+            <li><a href="https://www.netflix.com/strangerthings" target="_blank">Stranger Things</a></li>
+        </ul>
+        
+        <h2>Moje wykształcenie</h2>
+        <table border="1">
+            <tr>
+                <th>Rok</th>
+                <th>Szkoła</th>
+            </tr>
+            <tr>
+                <td>2023 - obecnie</td>
+                <td>WSIZ</td>
+            </tr>
+            <tr>
+                <td>2019 - 2023</td>
+                <td>Technikum nr 2 w Rzeszowie</td>
+            </tr>
+            <tr>
+                <td>2011 - 2019</td>
+                <td>Gimnazjum nr 2 w Kolbuszowej</td>
+            </tr>
+        </table>
+        
+        <h2>Nowa tabela</h2>
+        <table border="1" style="width: 200px; height: 200px;">
+            <tr>
+                <td rowspan="2" colspan="2" style="width: 100px; height: 100px;"></td>
+                <td colspan="2" style="width: 100px; height: 50px;"></td>
+            </tr>
+            <tr>
+                <td style="width: 50px; height: 50px;"></td>
+                <td style="width: 50px; height: 50px;"></td>
+            </tr>
+            <tr>
+                <td style="width: 50px; height: 50px;"></td>
+                <td colspan="2" rowspan="2" style="width: 100px; height: 100px;"></td>
+                <td style="width: 100px; height: 50px;"></td>
+            </tr>
+            <tr>
+                <td colspan="2" style="width: 100px; height: 50px;"></td>
+            </tr>
+        </table>
+        
+        <img src="https://www.mozaweb.com/pl/mozaik3D/FOL/altalanos/jupiter/960.jpg" />
+    </div>
+</body>
+</html>

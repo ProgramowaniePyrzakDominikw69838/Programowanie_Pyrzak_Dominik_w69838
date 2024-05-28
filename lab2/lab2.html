@@ -3,39 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>O mnie</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: "Inter", sans-serif;
-            box-sizing: border-box;
-        }
-        header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: calc(100% - 240px); /* zmieniono szerokość na 100% minus szerokość przycisków */
-            background-color: #f0f0f0;
-            padding: 20px 120px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            box-shadow: 0 0 10px 2px #aaa;
-            z-index: 100;
-        }
-        nav ul {
-            list-style: none;
-            display: flex;
-            gap: 20px;
-        }
-        nav ul li a {
-            text-decoration: none;
-            color: #333;
-        }
-        nav ul li a.home {
-            color: #ff0000; /* Kolor wyróżniający dla "Strona główna" */
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
@@ -48,7 +16,7 @@
             </ul>
         </nav>
     </header>
-    <div style="margin-top: 80px;"> <!-- dodane w celu uniknięcia zasłaniania treści przez nagłówek -->
+    <div style="margin-top: 80px;"> 
         <button onclick="location.href='ulubione_seriale.html'">Ulubione seriale</button>
         <button onclick="location.href='ulubione_ksiazki.html'">Ulubione książki</button>
         <form>

@@ -8,7 +8,7 @@ header {
     position: fixed;
     top: 0;
     left: 0;
-    width: calc(100% - 240px); 
+    width: 100%; 
     background-color: #f0f0f0;
     padding: 20px 120px;
     display: flex;
@@ -29,8 +29,54 @@ nav ul li a {
 nav ul li a.home {
     color: #ff0000; 
 }
-article, section {
+.content {
+    margin-top: 140px; /* Adjusted to clear header */
+    padding: 20px;
+}
+.custom-button {
+    background-color: #4CAF50; /* Zielony */
+    color: white;
+    border: none;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+}
+.custom-button:hover {
+    background-color: #45a049;
+}
+article {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 150px 120px;
+}
+.article-element {
+    width: 50%;
+}
+section {
     display: block;
     padding: 0 120px;
     font-size: 20px;
+}
+footer {
+    background-color: #f0f0f0;
+    padding: 20px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -2px 10px 2px #aaa;
+}
+footer p {
+    margin: 0;
+    font-size: 14px;
+    color: #333;
 }

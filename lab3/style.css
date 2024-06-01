@@ -1,15 +1,25 @@
-body {
+html, body {
     margin: 0;
     padding: 0;
     font-family: "Inter", sans-serif;
     box-sizing: border-box;
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Wypośrodkuj poziomo */
+    min-height: 100vh; /* Zapewniamy pełną wysokość okna przeglądarki */
 }
 
 header {
     position: fixed;
     top: 0;
-    left: 0;
-    width: 100%; 
+    left: 50%;
+    transform: translateX(-50%); /* Wypośrodkuj poziomo */
+    width: 100%;
+    max-width: 1200px; /* Ustal maksymalną szerokość */
     background-color: #f0f0f0;
     padding: 20px -5px; 
     display: flex;
@@ -35,8 +45,14 @@ nav ul li a.home {
 }
 
 .content {
+    flex: 1;
     margin-top: 140px; 
     padding: 20px;
+    padding-bottom: 60px; /* Dodajemy margines dolny */
+    width: 100%;
+    max-width: 1200px; /* Ustal maksymalną szerokość */
+    margin-left: auto;
+    margin-right: auto; /* Wypośrodkuj poziomo */
 }
 
 .custom-button {
@@ -81,14 +97,9 @@ footer {
     background-color: #f0f0f0;
     padding: 20px;
     text-align: center;
-    position: fixed;
-    bottom: 0;
     width: 100%;
+    max-width: 1200px; /* Ustal maksymalną szerokość */
     box-shadow: 0 -2px 10px 2px #aaa;
-}
-
-footer p {
-    margin: 0;
-    font-size: 14px;
-    color: #333;
+    margin-left: auto;
+    margin-right: auto; /* Wypośrodkuj poziomo */
 }

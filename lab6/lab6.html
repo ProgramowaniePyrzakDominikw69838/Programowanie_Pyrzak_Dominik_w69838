@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularz Rejestracyjny</title>
+    <link rel="stylesheet" href="lab6.css">
+</head>
+<body>
+    <form id="formularz-rejestracyjny">
+        <!-- Zadanie 1: Pola formularza -->
+        <div>
+            <label for="imie">Imię:</label>
+            <input type="text" id="imie" name="imie" required>
+            <span class="error" id="imie-error"></span>
+        </div>
+        <div>
+            <label for="nazwisko">Nazwisko:</label>
+            <input type="text" id="nazwisko" name="nazwisko" required>
+            <span class="error" id="nazwisko-error"></span>
+        </div>
+        <div>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <span class="error" id="email-error"></span>
+        </div>
+        <div>
+            <label for="haslo">Hasło:</label>
+            <input type="password" id="haslo" name="haslo" required minlength="8">
+            <span class="error" id="haslo-error"></span>
+        </div>
+        <div>
+            <!-- Zadanie 5: Pole "Powtórz hasło" -->
+            <label for="powtorz-haslo">Powtórz hasło:</label>
+            <input type="password" id="powtorz-haslo" name="powtorz-haslo" required>
+            <span class="error" id="powtorz-haslo-error"></span>
+        </div>
+        <div>
+            <label for="plec">Płeć:</label>
+            <select id="plec" name="plec" required>
+                <option value="">Wybierz...</option>
+                <option value="m">Mężczyzna</option>
+                <option value="k">Kobieta</option>
+            </select>
+            <span class="error" id="plec-error"></span>
+        </div>
+        <div>
+            <!-- Zadanie 8: Pole "Telefon" jako tekst -->
+            <label for="telefon">Telefon:</label>
+            <input type="text" id="telefon" name="telefon" required>
+            <span class="error" id="telefon-error"></span>
+        </div>
+        <div>
+            <label for="data-urodzenia">Data urodzenia:</label>
+            <input type="date" id="data-urodzenia" name="data-urodzenia" required>
+            <span class="error" id="data-urodzenia-error"></span>
+        </div>
+        <div>
+            <label for="kraj">Kraj:</label>
+            <select id="kraj" name="kraj" required>
+                <option value="">Wybierz...</option>
+                <option value="Polska">Polska</option>
+                <option value="Inny">Inny</option>
+            </select>
+            <span class="error" id="kraj-error"></span>
+        </div>
+        <div>
+            <!-- Zadanie 7: Pole "Województwo" -->
+            <label for="wojewodztwo">Województwo:</label>
+            <select id="wojewodztwo" name="wojewodztwo" disabled required>
+                <option value="">Wybierz...</option>
+                <option value="dolnoslaskie">Dolnośląskie</option>
+                <option value="kujawsko-pomorskie">Kujawsko-Pomorskie</option>
+                <option value="lubelskie">Lubelskie</option>
+                <option value="lubuskie">Lubuskie</option>
+                <option value="lodzkie">Łódzkie</option>
+                <option value="malopolskie">Małopolskie</option>
+                <option value="mazowieckie">Mazowieckie</option>
+                <option value="opolskie">Opolskie</option>
+                <option value="podkarpackie">Podkarpackie</option>
+                <option value="podlaskie">Podlaskie</option>
+                <option value="pomorskie">Pomorskie</option>
+                <option value="slaskie">Śląskie</option>
+                <option value="swietokrzyskie">Świętokrzyskie</option>
+                <option value="warminsko-mazurskie">Warmińsko-Mazurskie</option>
+                <option value="wielkopolskie">Wielkopolskie</option>
+                <option value="zachodniopomorskie">Zachodniopomorskie</option>                
+            </select>
+            <span class="error" id="wojewodztwo-error"></span>
+        </div>
+        <div>
+            <!-- Zadanie 6: Pola "Adres zamieszkania" i "Adres korespondencyjny" -->
+            <label for="adres-zamieszkania">Adres zamieszkania:</label>
+            <input type="text" id="adres-zamieszkania" name="adres-zamieszkania" disabled required>
+            <span class="error" id="adres-zamieszkania-error"></span>
+        </div>
+        <div>
+            <label for="adres-korespondencyjny-checkbox">Adres korespondencyjny jest taki sam jak adres zamieszkania:</label>
+            <input type="checkbox" id="adres-korespondencyjny-checkbox" name="adres-korespondencyjny-checkbox" checked>
+        </div>
+        <div id="adres-korespondencyjny-div" style="display: none;">
+            <label for="adres-korespondencyjny">Adres korespondencyjny:</label>
+            <input type="text" id="adres-korespondencyjny" name="adres-korespondencyjny" disabled>
+            <span class="error" id="adres-korespondencyjny-error"></span>
+        </div>
+        <button type="submit">Zapisz</button>
+    </form>
+
+    <script src="lab6.js"></script>
+</body>
+</html>
